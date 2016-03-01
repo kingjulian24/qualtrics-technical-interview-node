@@ -12,6 +12,10 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = _express2.default.Router();
@@ -27,5 +31,16 @@ router.get('/cartoons', function (req, res) {
 /*
 	Bonus: add another route (/cartoons/titles) that just returns an array of titles
 */
+
+router.get('/cartoons/titles', function (req, res) {
+	_fsExtra2.default.readJson(jsonDir + '/cartoons.json', function (err, data) {
+		if (err) return res.status(500).send('Error:' + err);
+		var titles = [];
+		_lodash2.default.each(data, function (d) {
+			titles.push(d.title);
+		});
+		res.json(titles);
+	});
+});
 
 module.exports = router;
