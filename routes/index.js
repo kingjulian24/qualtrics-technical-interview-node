@@ -11,7 +11,7 @@ var router = _express2.default.Router();
 /*
 	Replace the route with a regex that will match '/', '/index', and '/home'
 */
-router.get('/' /* replace route with regex */, function (req, res) {
+router.get(/\/(home|index)?$/, function (req, res) {
 	res.render('home');
 });
 
