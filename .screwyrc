@@ -1,0 +1,9 @@
+{
+	"name": "Qualtrics Interview Npm Scripts",
+	"primary": ["start", "transpile", "styles"],
+	"exclude": ["screwy"],
+	"watch": {
+		"src/scripts": "transpile",
+		"src/styles": "styles"
+	}
+}
