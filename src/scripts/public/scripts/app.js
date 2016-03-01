@@ -18,6 +18,7 @@ knucklebone.getJson('/api/cartoons')
 		/*
 			ADD css class "entry" to the `cartoonElm` element;
 		*/
+		cartoonElm.classList.add('entry');
 
 		/*
 			Make it so when you click on `cartoonElm` element:

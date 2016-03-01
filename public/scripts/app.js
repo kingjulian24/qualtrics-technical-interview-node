@@ -29,6 +29,7 @@ _knucklebone2.default.getJson('/api/cartoons').success(function (cartoonsArr) {
 		/*
   	ADD css class "entry" to the `cartoonElm` element;
   */
+		cartoonElm.classList.add('entry');
 
 		/*
   	Make it so when you click on `cartoonElm` element:

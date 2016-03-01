@@ -65,7 +65,8 @@
 	_knucklebone2.default.getJson('/api/cartoons').success(function (cartoonsArr) {
 
 		/*
-	 	What is a 'DocumentFragment'? Purpose? 
+	 	What is a 'DocumentFragment'? Purpose?
+	 	Answer: Lightweight node that can be use to hold other dom nodes. In this case used to hold div elms. so that we only have to write to the dom once. 
 	 */
 		var frag = document.createDocumentFragment();
 
@@ -75,6 +76,7 @@
 			/*
 	  	ADD css class "entry" to the `cartoonElm` element;
 	  */
+			cartoonElm.classList.add('entry');
 
 			/*
 	  	Make it so when you click on `cartoonElm` element:
