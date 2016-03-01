@@ -7,7 +7,8 @@ knucklebone.getJson('/api/cartoons')
 .success(cartoonsArr => {
 
 	/*
-		What is a 'DocumentFragment'? Purpose? 
+		What is a 'DocumentFragment'? Purpose?
+		Answer: Lightweight node that can be use to hold other dom nodes. In this case used to hold div elms. so that we only have to write to the dom once. 
 	*/
 	const frag = document.createDocumentFragment();
 	
