@@ -20,7 +20,12 @@ div.entry
 	box-sizing border-box
 	background-color rgb(245,245,245)
 	// how do you show the "hand cursor" instead of the "arrow" or "vertical text cursor"?
+	cursor pointer
 	// how do you make is so the user CAN'T highlight the text?
+	user-select none
+	&:hover
+		border: 1px solid darken(rgb(215,215,215), 15%)
+		transition: border 2s
 
 // Add a hover effect to the div.entry
 // on hover:
