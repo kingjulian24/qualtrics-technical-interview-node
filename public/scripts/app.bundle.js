@@ -82,6 +82,9 @@
 	  	Make it so when you click on `cartoonElm` element:
 	  		The list of characters, `cartoonObj.characters`, is alerted to the user
 	  */
+			cartoonElm.addEventListener('click', function () {
+				alert(cartoonObj.characters.join());
+			});
 
 			cartoonElm.textContent = cartoonObj.title;
 			frag.appendChild(cartoonElm);
